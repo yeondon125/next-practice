@@ -1,3 +1,14 @@
-export default function UserPage() {
-  return <div>유저 페이지입니다.</div>;
+export default async function UserPage() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const users = await res.json();
+
+  return (
+    <div>
+      {users.map((data: any) => (
+        <div key={data.id}>
+          <h3>{data.title}</h3>
+        </div>
+      ))}
+    </div>
+  );
 }
