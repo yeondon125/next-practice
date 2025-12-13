@@ -1,5 +1,5 @@
 export default async function UserPage() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/users`);
   const users = await res.json();
 
   return (
