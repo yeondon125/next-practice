@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/api/:path*",
-        destination: `${process.env.NEXT_API_BASE_URL}/:path*`,
+        destination: `https://jsonplaceholder.typicode.com/:path*`,
       },
     ];
   },
